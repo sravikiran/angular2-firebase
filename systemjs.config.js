@@ -1,7 +1,7 @@
 (function (global) {
   System.config({
     // DEMO ONLY! REAL CODE SHOULD NOT TRANSPILE IN THE BROWSER
-    transpiler: 'ts',
+    transpiler: 'typescript',
     typescriptOptions: {
       tsconfig: true
     },
@@ -29,9 +29,7 @@
 
       // other libraries
       'rxjs':                       'npm:rxjs',
-      'ts':                         'npm:plugin-typescript/lib/plugin.js',
-      'typescript':                 'npm:typescript/lib/typescript.js',
-
+      'typescript':                 'npm:typescript/lib/typescript.js'
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
@@ -40,9 +38,6 @@
         defaultExtension: 'ts'
       },
       rxjs: {
-        defaultExtension: 'js'
-      },
-			ts: {
         defaultExtension: 'js'
       }
     }

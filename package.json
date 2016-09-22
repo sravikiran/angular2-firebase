@@ -4,7 +4,7 @@
   "description": "An Angular 2 demo using Firebase",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "lite-server"
   },
   "repository": {
     "type": "git",
@@ -39,7 +39,8 @@
   },
   "devDependencies": {
     "@types/es6-shim": "^0.31.32",
-    "typescript": "^2.0.0",
-    "plugin-typescript":"^4.0.10"
+    "lite-server": "^2.2.2",
+    "plugin-typescript": "^4.0.10",
+    "typescript": "^2.0.0"
   }
 }
