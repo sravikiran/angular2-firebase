@@ -62,12 +62,6 @@ export class BusService {
 	}
 
 	saveBus(bus: Bus) {
-		for (let index = 0; index < this.buses.length; index++) {
-			if (this.buses[index].busId === bus.busId) {
-				this.buses[index] = bus;
-				console.log(this.buses[index]);
-				return;
-			}
-		}
+		//To be used to save data to Firebase
 	}
 }

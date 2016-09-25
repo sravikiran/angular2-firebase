@@ -24,7 +24,7 @@ export class BusEditComponent implements OnInit {
 	}
 
 	submit() {
-		this.busService.saveBus(this.bus);
+		console.log(this.bus);
 		this.router.navigate(['']);
 	}
 }
