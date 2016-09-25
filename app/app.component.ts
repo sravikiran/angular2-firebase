@@ -1,7 +1,11 @@
-import {NgModule, Component} from "@angular/core";
+import { Component, OnInit } from "@angular/core";
+import { BusService } from "./bus.service";
+import { Bus } from "./bus.model";
+import { Inject } from "@angular/core";
 
 @Component({
 	selector: "app",
-	template: "Hello, we will start with Angular 2 and Firebase!!!"
+	templateUrl: "./app/app.component.html",
+	providers: [BusService]
 })
 export class AppComponent {}

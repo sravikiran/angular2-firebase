@@ -1,0 +1,14 @@
+<div class="thumbnail col-md-3 col-sm-3 col-lg-3" *ngFor="let bus of buses">
+	<div class="caption"><strong>{{bus.from}} to {{bus.to}}</strong></div>
+
+	<img [src]="bus.imageUrl" />
+	<br>
+	<br>
+	<div style="text-align:center;">{{bus.busId}}
+		<div style="margin-right: 9px;">Last Spotted At: {{bus.lastSpottedAt}}</div>
+		<div style="margin-right: 9px;">Time Last Spotted: {{bus.lastSpottedTime}}</div>
+		<div>To destination: {{bus.kmsToGo}}</div>
+		<div><a class='btn btn-link' [routerLink]="['busedit',bus.busId]">Edit Bus</a></div>
+	</div>
+	<br>
+</div>
