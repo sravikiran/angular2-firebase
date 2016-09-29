@@ -6,15 +6,15 @@ import { Bus } from "./bus.model";
 
 @Component({
 	selector: "bus-edit",
-	templateUrl: "./app/busedit.component.html",
+	templateUrl: "./src/busedit.component.html",
 	providers: [BusService]
 })
 export class BusEditComponent implements OnInit {
 	bus: Bus;
 
-	constructor( @Inject(BusService) private busService: BusService,
-		@Inject(ActivatedRoute) private route: ActivatedRoute,
-		@Inject(Router) private router: Router) { }
+	constructor(private busService: BusService,
+		private route: ActivatedRoute,
+		private router: Router) { }
 
 	ngOnInit() {
 		this.route.params.subscribe((queryParams) => {
@@ -24,7 +24,6 @@ export class BusEditComponent implements OnInit {
 	}
 
 	submit() {
-		console.log(this.bus);
 		this.router.navigate(['']);
 	}
 }

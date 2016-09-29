@@ -46,13 +46,23 @@
 
       // other libraries
       'rxjs': 'npm:rxjs',
-      'typescript': 'npm:typescript/lib/typescript.js'
+      'typescript': 'npm:typescript/lib/typescript.js',
+      'firebase':'npm:firebase',
+      'angularfire2': 'npm:angularfire2'
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
-      app: {
-        main: './main.ts',
-        defaultExtension: 'ts'
+      angularfire2:{
+        main: 'index.js',
+        defaultExtension: 'js'
+      },
+      firebase:{
+        main: 'firebase-browser.js',
+        defaultExtension: 'js'
+      },
+      src: {
+        main: './main.js',
+        defaultExtension: 'js'
       },
       rxjs: {
         defaultExtension: 'js'
