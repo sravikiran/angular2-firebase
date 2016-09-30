@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <base href="/" />
+  <title>Angular 2 setup</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+
+<body>
+  <div>
+    <app-root>Loading...</app-root>
+  </div>
+
+  <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+  <script src="node_modules/reflect-metadata/Reflect.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <script src="node_modules/zone.js/dist/zone.js"></script>
+  <script src="systemjs.config.js"></script>
+  <script>
+        System.import('./src/main')
+            .then(null, console.error.bind(console));
+  </script>
+</body>
+
+</html>
