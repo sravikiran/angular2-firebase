@@ -10,7 +10,7 @@ import { AngularFireModule} from 'angularfire2';
 
 import { AppComponent } from "./app.component";
 import { BusStatusComponent } from "./bussatus.component";
-import { BusEditComponent } from "./busedit.component";
+import { AdminComponent } from "./admin.component";
 import { BusService } from "./bus.service";
 import {App_Routing} from "./app.routes";
 
@@ -24,7 +24,7 @@ import {App_Routing} from "./app.routes";
 
 @NgModule({
 	imports: [BrowserModule, FormsModule, HttpModule, RouterModule, App_Routing, AngularFireModule.initializeApp(config)],
-	declarations: [AppComponent, BusStatusComponent, BusEditComponent],
+	declarations: [AppComponent, BusStatusComponent, AdminComponent],
 	providers: [BusService],
 	bootstrap: [AppComponent]
 })

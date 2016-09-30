@@ -1,21 +1,22 @@
-import { Component, OnInit } from "@angular/core";
-import { BusService } from "./bus.service";
-import { Bus } from "./bus.model";
-import { Inject } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 @Component({
-	selector: "bus-status",
-	templateUrl: "./src/busstatus.component.html",
-	providers: [BusService]
+  selector: 'app-bus-list',
+  templateUrl: './src/busstatus.component.html'
 })
 export class BusStatusComponent implements OnInit {
-	buses: Bus[] = [];
+  buses: FirebaseListObservable<any[]>;
+  constructor(af: AngularFire){
+    console.log(af);
+    this.buses = af.database.list("/schedule");
+  }
 
-	constructor(private busService: BusService) {	}
+  busSelected(bus){
+    console.log(bus);
+  }
 
-	ngOnInit(){
-		this.busService.getBuses().subscribe((buses) => {
-			this.buses = buses;
-		});
-	}
+  ngOnInit() {
+  }
+
 }

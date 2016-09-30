@@ -4,9 +4,8 @@ import { Bus } from "./bus.model";
 import { Inject } from "@angular/core";
 
 @Component({
-	selector: "app",
-	templateUrl: "./src/app.component.html",
-	providers: [BusService]
+	selector: "app-root",
+	templateUrl: "./src/app.component.html"
 })
 export class AppComponent {
 

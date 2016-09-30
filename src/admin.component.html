@@ -1,0 +1,35 @@
+<div class="row">
+	<div class="col-sm-6" *ngFor="let item of schedule | async">
+		<div class="panel panel-default" click="(busSelected(item))">
+			<div class="panel-heading">
+				<h3 class="panel-title">{{item.from}} to {{item.to}}</h3>
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-sm-6">
+						Expected to reach by <strong>{{item.expectedTimeOfArrival | date: 'H:mm'}} </strong>
+					</div>
+					<div class="col-sm-6">
+						Delayed {{item.delay}} mins
+						<div class="btn-group" role="group">
+							<button (click)="increment(item)" class="btn btn-primary">+</button>
+							<button (click)="decrement(item)" class="btn btn-default">-</button>
+
+						</div>
+					</div>
+				</div>
+				<div class="row">
+
+					<div class="col-sm-12">Enter reason for delay:</div>
+					<div class="col-sm-12">
+						<textarea style="width:100%" type="text" rows="3" [(ngModel)]="item.delayReason"></textarea>
+					</div>
+					<div class="col-sm-12">
+						<button class="btn btn-info" (click)="save(item)">Save</button>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
