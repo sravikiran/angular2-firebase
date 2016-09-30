@@ -7,12 +7,12 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 })
 export class BusStatusComponent implements OnInit {
   buses: FirebaseListObservable<any[]>;
-  constructor(af: AngularFire){
+  constructor(af: AngularFire) {
     console.log(af);
     this.buses = af.database.list("/schedule");
   }
 
-  busSelected(bus){
+  busSelected(bus) {
     console.log(bus);
   }
 
